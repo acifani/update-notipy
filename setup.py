@@ -6,7 +6,7 @@ with io.open('README.rst', 'rt', encoding='utf8') as f:
 
 setup(
     name='update-notipy',
-    version='0.1.0',
+    version='0.1.1',
     url='https://github.com/acifani/update-notipy',
     license='BSD',
     author='Alessandro Cifani',

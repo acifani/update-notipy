@@ -11,6 +11,8 @@ update_notify('pkg-info', __version__).notify()
 #    │                                           │
 #    └───────────────────────────────────────────┘
 
+update_notify('pkg-info', __version__, defer=True, message="See you at process exit!").notify()
+
 def foo():
     four = 2 + 2
     print(four)

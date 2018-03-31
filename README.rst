@@ -1,7 +1,8 @@
 📬 update-notipy
 ================
 
-Update notifications for your python app! Py-port of `update-notifier <https://github.com/yeoman/update-notifier>`_.
+Send a notification when there is an update available for your package!
+Py-port of `update-notifier <https://github.com/yeoman/update-notifier>`_.
 
 
 Install
@@ -24,8 +25,17 @@ Usage
         <pkg_name>,
         <pkg_version>,
         callback=<callback>,
-        message=<message>).notify()
+        message=<message>,
+        defer=<True|False>).notify()
 
+Arguments
+~~~~~~~~~
+
+- ``pkg_name: str``: name of the package as registered on PyPI
+- ``pkg_version: str``: version of the installed package, to be compared with the latest one
+- ``callback: Callable``: function to be called instead of printing the standard message
+- ``message: str``: custom message to be printed
+- ``defer: bool``: set to ``True`` if you want to notify the user when the app closes
 
 Examples
 --------
