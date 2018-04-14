@@ -2,6 +2,7 @@ import atexit
 from typing import Callable
 
 from boxing import boxing
+from colored import fore, style
 from pkg_info import get_pkg_info
 from semver import compare
 
@@ -35,5 +36,8 @@ class update_notify(object):
             action(arg) if arg else action()
 
     def default_message(self) -> str:
-        return boxing(f'Update available {self.version} → {self.latest}\n' +
-                      f'Run pip install -U {self.name} to update')
+        version = fore.GREY_53 + self.version + style.RESET
+        latest = fore.LIGHT_GREEN + self.latest + style.RESET
+        command = fore.LIGHT_BLUE + 'pip install -U ' + self.name + style.RESET
+        return boxing(f'Update available {version} → {latest}\n' +
+                      f'Run {command} to update')
