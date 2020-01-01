@@ -41,10 +41,10 @@
         },
         "colored": {
             "hashes": [
-                "sha256:2468361d777160498cd6db6c47c41bf67ed1029723c4acabae512bedc021c961"
+                "sha256:056fac09d9e39b34296e7618897ed1b8c274f98423770c2980d829fd670955ed"
             ],
             "index": "pypi",
-            "version": "==1.4.1"
+            "version": "==1.4.2"
         },
         "idna": {
             "hashes": [
